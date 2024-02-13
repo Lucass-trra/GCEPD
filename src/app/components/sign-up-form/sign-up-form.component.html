@@ -1,0 +1,75 @@
+<section class="form-container">
+    <div class="button-container">
+        <button (click)="showLoginForm()" >log-in</button>
+        <button (click)="showSignUpForm()" >sign-up</button>
+    </div>
+
+    <form [formGroup]="signUpForm" (ngSubmit)="onSubmit()">
+        <input 
+        formControlName="name" 
+        placeholder="your name" 
+        type="text"
+        >
+          <div 
+          class="error"
+          *ngIf="signUpForm.get('name')?.hasError('required') && signUpForm.get('name')?.touched"
+          >
+          Name is required 
+          </div>
+          
+        <input 
+        name="userEmail" 
+        formControlName="email"
+        placeholder="your best email" 
+        type="email" 
+        *ngIf="!showOrNotForm"
+        >
+          <div
+          class="error" 
+          *ngIf="signUpForm.get('email')?.hasError('required') && signUpForm.get('email')?.touched"
+          >
+          email is required
+          </div>
+          
+          <div
+          class="error" 
+          *ngIf="signUpForm.get('email')?.hasError('email') && signUpForm.get('email')?.touched"
+          >
+          email is invalid format
+          </div>
+
+
+        <input 
+        name="userPassword" 
+        formControlName="password"
+        placeholder="your password" 
+        type="password"
+        >
+          <div
+          class="error"
+          *ngIf="signUpForm.get('password')?.hasError('required') && signUpForm.get('password')?.touched"
+          >
+          password is required
+          </div>
+
+          <div
+          class="error"
+          *ngIf="signUpForm.get('password')?.hasError('minlength') && signUpForm.get('password')?.touched"
+          >
+          your password is too short
+          </div>
+
+          <div
+          class="error"
+          *ngIf="signUpForm.get('password')?.hasError('maxlength') && signUpForm.get('password')?.touched"
+          >
+          your password broke the limit of
+          </div>
+
+          <button type="submit">Submit</button>
+    </form>
+
+   <div class="user-welcome" *ngIf="signUpForm.get('name')?.value.length > 0 ">
+       welcome {{signUpForm.get('name')?.value}}
+   </div>
+</section>

@@ -1,27 +1,35 @@
-# GCEPD
 
+# GCEPD
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.1.2.
 
-## Development server
+## Resumo
+GCEPD é um sistema de gerenciamento e consulta para produtos domésticos. A ideia é permitir ao usuário cadastrar seus produtos domésticos recém comprados ou até mesmo usados com todas as informações relevantes sobre esse produto, para que futuramente o mesmo seja consultado, deletado ou editado.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Tecnologias
+- Angular
+- TypeScript
+- HTML
+- CSS
+- Node.js
+<!-- - spring boot
+- kotlin -->
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Estrutura
+### Frontend
 
-## Build
+<!-- ### Backend -->
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+<!-- ## Funcionalidades atuais -->
 
-## Running unit tests
+## Como acessar o Projeto via Angular
+- primeiro faça o `git clone` para baixar o repositório completo na sua máquina ou baixe via <b>zip</b> e descompacte na sua pasta desejada
+  
+- para ir para o próximo passo será necessário ter instalado o <b><a href="https://nodejs.org/en">node.js</a></b> com ele teremos o gerenciador de dependẽncias <b>npm</b>, com ele será possível instalar o CLI do angular
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- depois será preciso baixar o <b><a href="https://angular.io/guide/setup-local#install-the-angular-cli">angular CLI</a></b>,com ele será possível executar alguns comandos necessários para rodar esse projeto angular localmente 
 
-## Running end-to-end tests
+- dentro da pasta deste projeto rode no terminal `ng serve` para abrir um servidor local de desenvolvimento, navegue até a url `http://localhost:4200/`. A aplicação será automaticamente recarregada se vocẽ fizer alguma alteração, com isso será possível ver todo o código da aplicação
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+- para obter mais informações em como usar o <b>angular CLI</b> use o `ng help` no terminal integrado e vocẽ verá várias opções de comandos e suas descrições. ou então vá para [Angular CLI Overview and Command Reference](https://angular.io/cli).
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.

@@ -1,0 +1,38 @@
+header {
+    display: flex;
+    align-items: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    justify-content: space-between;
+    background-color: var(--color_default_darkBlue);
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    height: 15vh;
+    
+    section.header-links-container {
+        ul {
+            display: flex;
+            list-style: none;
+            gap: 1rem;
+        }
+        
+        a {
+            text-decoration: none;
+            color: var(--color_default_white);
+            letter-spacing: 1px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            transition: .2s ease-in-out;
+            padding: .5rem;
+        }
+
+        a:hover {
+            border-radius: .4rem;
+            box-shadow: 10px 5px 8px 0px var(--color_default_black);
+        }
+    }
+    
+    section.header-button-container {
+        display: flex;
+        gap: 1rem;
+    }
+}

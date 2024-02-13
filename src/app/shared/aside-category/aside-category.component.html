@@ -1,0 +1,31 @@
+<aside>
+    <div class="categories-presentation">
+        <h3>product categories</h3>
+    </div>  
+
+    <section class="user-categories">
+        <a 
+        *ngFor="let c of categoriesList"
+        href=""
+        >
+        {{c.name}}
+        </a>
+    </section>
+
+    <div class="inputToAddCategory">
+        <input 
+        type="text" 
+        [(ngModel)]="inputValue"
+        (blur)="addItenToList()"
+        *ngIf="isInputVisible">
+    </div>
+
+    <div class="button-addCategory-container">
+        <app-button-template
+        [buttonName]="'new category'"
+        [buttonFunction]="'new_category'"
+        (showInput)="showInputToAddCategory($event)"
+        ></app-button-template>
+    </div>
+
+</aside>

@@ -1,0 +1,47 @@
+section.card-container {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid var(--color_default_black);
+    padding-top: 1rem;
+    padding-bottom: 0px;
+    border-radius: .5rem;
+    gap: 1rem;
+    width: 50%;
+
+    header {
+        display: flex;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        justify-content: space-between;
+
+        h4 {
+            font-size: 2rem;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+    }
+
+    figure {
+        width: 100%;
+        padding-left: 1rem;
+        padding-right: 1rem;
+
+        img {
+            width: 100%;
+            border-radius: 1rem;
+        }
+    }
+
+    div.main-informations {
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem;
+        background-color: var(--color_default_darkBlue);
+        color: var(--color_default_white);
+        gap: 1rem;
+
+        span {
+            width: 50%;
+        }
+    }
+
+}

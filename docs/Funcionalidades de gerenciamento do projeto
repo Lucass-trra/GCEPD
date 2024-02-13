@@ -1,0 +1,16 @@
+
+**FUNCIONALIDADES GERENCIAMENTO:**
+1. esse sistema permite a coleta do estoque desse produto, sendo assim, ele sempre avisa na parte de relatórios quais produtos estão em menor estoque e quais estão em maior estoque, permitindo o usuário a enxergar com mais clareza quais produtos deverão ter um aumento no estoque e quais deveriam ter em menor quantidade no estoque, permitindo um maior equilíbrio no orçamento disponível 
+
+2. esse sistema permite, na parte de relatórios, exibir em ordem decrescente por categoria e período os produtos que custaram mais por unidade até os que custaram menos por unidade. Também pode fazer o mesmo com esses mesmos produtos com estoque maior que 1(sem ser por unidade)
+
+3. esse sistema irá somar o custo total de cada produto cadastrado (preço unitário * estoque) por categoria e exibir isso, permitindo o usuário saber quanto ele gastou no total em cada categoria. 
+
+4. Esse sistema fará uma busca em todas as categorias e buscará o produto que custou mais caro por unidade, o inverso também acontece, buscando em todas as categorias qual foi o produto mais barato por unidade
+
+5. esse sistema irá rastrear a data de validade de cada produto cadastrado por categoria e avisará na parte de relatórios quais produtos estão prestes a expirar e quais continuam longe de expirar.
+
+6. Esse sistema permitirá ao usuário colocar um orçamento para cada categoria, e automaticamente o sistema irá calcular qual seria o estoque ideal para cada produto cadastrado naquela respectiva categoria baseado em seu preço unitário para atingir o orçamento estipulado. 
+
+
+

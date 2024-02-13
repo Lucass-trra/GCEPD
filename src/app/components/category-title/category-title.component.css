@@ -1,0 +1,7 @@
+h1 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+    color: var(--color_default_darkBlue);
+
+}

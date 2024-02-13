@@ -1,0 +1,13 @@
+div.category-page-container {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    gap: 1rem;
+
+    section.product-cards-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        padding: 1rem;
+    }
+}

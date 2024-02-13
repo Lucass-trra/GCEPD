@@ -1,0 +1,45 @@
+section.form-container {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 1.5rem;
+    padding-bottom: 1rem;
+    align-items: center;
+    width: 50%;
+    border: 1px solid var(--color_default_black);
+    box-shadow: 1rem 1rem 1rem 0rem rgba(0, 0, 0, 0.1) ;
+    border-radius: 0.5rem;
+
+    div.button-container {
+        display: flex;
+        width: 80%;
+        
+        button {
+            width: 50%;
+            border: transparent;
+            background-color: var(--color_default_ligthBlue);
+            transition: .5s ease-in-out;
+            cursor: pointer;
+        }
+        
+        button:hover {
+            box-shadow: inset 0rem 5rem 0rem 0rem var(--color_default_white);
+        }
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;
+        width: 80%;
+
+        input:focus {
+            outline:1px solid var(--color_default_ligthBlue);
+        }
+    }
+
+    button, input {
+        padding: 1rem;
+    }
+}
