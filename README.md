@@ -17,13 +17,13 @@ GCEPD é um sistema de gerenciamento e consulta para produtos domésticos. A ide
 
 ## Estrutura
 ### Frontend
-As principais estruturas que compõem o visual do projeto são os components, pages, shared. 
+As principais estruturas que compõem o visual do projeto são os `components`, `pages`, `shared`. 
 
-components se referem as menores estruturas do projeto, que normalmente são reutilizadas em várias partes, porém, com algumas modificações no conteúdo.
+`Components` se referem as menores estruturas do projeto, que normalmente são reutilizadas em várias partes, porém, com algumas modificações no conteúdo.
 
-Pages se refere a pasta que contém todas as páginas importantes do GCEPD, essas pages são compostas de components diferentes, e esses mesmos components são organizados de formas diferentes para cada página
+`Pages` se refere a pasta que contém todas as páginas importantes do GCEPD, essas pages são compostas de components diferentes, e esses mesmos components são organizados de formas diferentes para cada página
 
-shared são como as pages, porém, são pages globais, e isso significa que eles estão presentes em qualquer contexto e são fixos, os exemplos são: header, footer, aside
+`shared` são como as pages, porém, são pages globais, e isso significa que eles estão presentes em qualquer contexto e são fixos, os exemplos são: header, footer, aside
 
 
 <!-- ### Backend -->
