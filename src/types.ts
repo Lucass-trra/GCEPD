@@ -3,3 +3,8 @@ export type category = {
     link: string
     id: number 
 }
+
+export type TutorialLinks = {
+    id: number
+    placeHolder:string
+}

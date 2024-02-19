@@ -3,7 +3,6 @@ aside {
     flex-direction: column;
     border-radius: 0.5rem;
     background-color: var(--color_default_mediumBlue);
-    width: 20%;
     min-height: 50vh;
     max-height: 100vh;
 

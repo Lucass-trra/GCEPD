@@ -14,6 +14,7 @@ export class ButtonTemplateComponent implements OnChanges {
   @Input() buttonFunction:string = ""
 
   @Output() showInput: EventEmitter<boolean> = new EventEmitter<boolean>()
+  @Output() addMoreOneInput: EventEmitter<string> = new EventEmitter<string>()
 
 
   ngOnChanges(): void {
@@ -31,6 +32,10 @@ export class ButtonTemplateComponent implements OnChanges {
 
       case 'new_product':
         console.log("hello new product")
+      break;
+      
+      case 'tutorialForm-addOneMoreInput':
+        this.addMoreOneInput.emit("ex: https://example.com")
       break;
       
       default:

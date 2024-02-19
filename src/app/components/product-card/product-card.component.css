@@ -6,7 +6,6 @@ section.card-container {
     padding-bottom: 0px;
     border-radius: .5rem;
     gap: 1rem;
-    width: 50%;
 
     header {
         display: flex;

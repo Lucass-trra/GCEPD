@@ -1,0 +1,89 @@
+form {
+    margin: auto;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    gap: 1rem;
+
+    input,textarea,fieldset {
+        padding: .6rem;
+        border-radius: .5rem;
+        border: 3px solid var(--color_default_ligthBlue);
+    }
+
+    textarea {
+        width: 100%;
+        min-width: 50%;
+        max-width: 100%;
+
+        height: 30vh;
+        max-height: 50vh;
+        min-height: 20vh;
+    }
+
+    button{
+        padding: .5rem;
+        border: 3px solid var(--color_default_black);
+        border-radius: .5rem;
+        cursor: pointer;
+        color: var(--color_default_white);
+        background-color: crimson;
+        transition: .5s ease-in-out;
+    }
+
+    button:hover {
+        color: var(--color_default_black);
+        box-shadow: inset 0rem 5rem 0rem 0rem var(--color_default_white);
+    }
+
+    div.delete-form-container {
+        display: flex;
+        width: 100%;
+    }
+
+    div.tutorial-informations {
+        display: flex;
+        gap: .5rem;
+        width: 100%;
+        flex-direction: column;
+
+        div#name-container {
+            input#tutorialNameId {
+                width: 50%;
+            }
+        }
+
+        div#name-container,div#description-container {
+            display: flex;
+            flex-direction: column;
+
+            label {
+                align-self: flex-start;
+            }
+        }
+    }
+
+
+    fieldset.tutorialLinks-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        width: 100%;
+
+        div#input-links-container {
+            width: 100%;
+
+            div.input-container {
+                display: flex;
+                margin-bottom: 1rem;
+                gap: .5rem;
+                
+                input.tutorialLink {
+                    width: 90%;
+                }
+            }
+        }
+    }
+}

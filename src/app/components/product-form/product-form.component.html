@@ -1,0 +1,278 @@
+<form action="" class="product-form" [formGroup]="productForm" (ngSubmit)="onSubmit()">
+    <section class="basic-informations">
+        <div class="name-container">
+            <label for="productName">name</label>
+            <input 
+            type="text" 
+            placeholder="ex: celular redmi 10c preto"
+            name="producName"
+            id="productName"
+            maxlength="100"
+            formControlName="name"
+            />
+            <p
+            class="error"
+            *ngIf="productForm.get('name')?.hasError('required') && productForm.get('name')?.touched"
+            >
+            *the field <span>name</span> is required
+            </p>
+        </div>
+        
+        <div id="basic-input-container">
+            <div id="color-container">
+                <label for="productColor">color</label>
+                <input 
+                type="text" 
+                maxlength="51"
+                name="color"
+                formControlName="productColor"
+                id="productColor"
+                />
+                <p
+                class="error"
+                *ngIf="productForm.get('productColor')?.hasError('maxlength')"
+                >
+                *the field <span>color</span> need to have less characteres
+                </p>
+            </div>
+
+            <div id="category-container">
+                <label for="category">category</label>
+                <input 
+                type="text" 
+                maxlength="50"
+                name="productCategory"
+                formControlName="category"
+                id="category"
+                />
+                <p
+                class="error"
+                *ngIf="productForm.get('category')?.hasError('required') && productForm.get('category')?.touched"
+                >
+                *the field <span>category</span> is required
+                </p>
+            </div>
+        </div>
+
+        <div id="description-container">
+            <label for="productDescription">description</label>
+            <textarea 
+            name="productDescription" 
+            maxlength="501"
+            placeholder="ex: a cellphone that was purchased in...."
+            formControlName="description"
+            id="productDescription" 
+            cols="30" 
+            rows="10"
+            >
+            </textarea>
+            <p
+            class="error"
+            *ngIf="productForm.get('description')?.hasError('maxlength')"
+            >
+            *the field <span>description</span> need to have less characteres
+            </p>
+        </div>  
+
+    </section>
+
+    <section class="principal-informations">
+        <div id="brand-Model_container">
+           <div id="brand-container">
+                <label for="productBrand">brand</label>
+                <input 
+                type="text" 
+                maxlength="50"
+                placeholder="xiome, apple, android"
+                name="productBrand"
+                formControlName="brand"
+                id="productBrand"
+                />
+                <p
+                class="error"
+                *ngIf="productForm.get('brand')?.hasError('required') && productForm.get('brand')?.touched"
+                >
+                *the field <span>brand</span> is required
+                </p>
+           </div>
+           
+           <div id="model-container">
+                <label for="productModel">model</label>
+                <input 
+                type="text" 
+                maxlength="50"
+                placeholder="ex: 78CQ6GHS"
+                name="productModel"
+                formControlName="model"
+                id="productModel"
+                />
+                <p
+                class="error"
+                *ngIf="productForm.get('model')?.hasError('required') && productForm.get('model')?.touched"
+                >
+                *the field <span>model</span> is required
+                </p>
+           </div>
+        </div>
+
+        <div id="manufacturer-price_container"> 
+            <div id="manufacturer-container">
+                <label for="productManufacturer">manufacturer</label>
+                <input 
+                type="text" 
+                maxlength="51"
+                name="productManufacturer"
+                formControlName="manufacturer"
+                id="productManufacturer"
+                />
+                <p
+                class="error"
+                *ngIf="productForm.get('manufacturer')?.hasError('maxlength')"
+                >
+                *the field <span>manufacturer</span> need to have less characteres
+                </p>
+                
+            </div>
+            
+            <div id="price-container">
+                <label for="productPrice">price</label>
+                <input 
+                type="number" 
+                maxlength="50"
+                name="productPrice"
+                formControlName="price"
+                id="productPrice"
+                />
+                <p
+                class="error"
+                *ngIf="productForm.get('price')?.hasError('required') && productForm.get('price')?.touched"
+                >
+                *the field <span>price</span> is required
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="numeric-informations">
+        <div id="purchased-validity_container">
+            <div id="purchasedIn-container">
+                <label for="productPurchased_in">purchased-in</label>
+                <input 
+                type="date" 
+                name="productPurchased_in"
+                formControlName="purchased_in"
+                id="productPurchased_in"
+                />
+                <p
+                class="error"
+                *ngIf="productForm.get('purchased_in')?.hasError('required') && productForm.get('purchased_in')?.touched"
+                >
+                *the field <span>purchased in</span> is required
+                </p>
+            </div>
+
+            <div id="validity-container">
+                <label for="product_validity">validity date</label>
+                <input 
+                type="date" 
+                name="product_validity"
+                formControlName="validity"
+                id="product_validity"
+                />
+                <p
+                class="error"
+                *ngIf="productForm.get('validity')?.hasError('required') && productForm.get('validity')?.touched"
+                >
+                *the field <span>validity</span> is required
+                </p>
+            </div>
+        </div>
+
+        <div id="length-quantity_container"> 
+            <div id="length-container">
+                <label for="product_length">length</label>
+                <input 
+                type="number" 
+                name="product_length"
+                formControlName="length"
+                id="product_length"
+                />
+                <p
+                class="error"
+                *ngIf="productForm.get('length')?.hasError('required') && productForm.get('length')?.touched"
+                >
+                *the field <span>length</span> is required
+                </p>
+            </div>
+
+            <div id="quantity-container">
+                <label 
+                ondrop="handleFileDrop()" 
+                ondragover="handleDragOver()"
+                for="productQuantity"
+                >quantity
+                </label>
+                <input 
+                type="number" 
+                name="productQuantity"
+                formControlName="quantity"
+                id="productQuantity"
+                />
+                <p
+                class="error"
+                *ngIf="productForm.get('quantity')?.hasError('required') && productForm.get('quantity')?.touched"
+                >
+                *the field <span>quantity</span> is required
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="product-image-container">
+        <label id="labelToPutImage" for="product-image">
+            <img 
+            id="image"
+            src="../../../assets/product-image-icon.png" 
+            alt="product image icon">
+            <span *ngIf="showSpanOrNot">carregue sua imagem aqui</span>
+        </label>
+        <input 
+        type="file"
+        name="product-image" 
+        formControlName="image"
+        accept="image/*"
+        id="product-image" 
+        (change)="handleFileSelect($event)"
+        />
+    </section>
+
+    <section class="tutorial-links-container">
+        <p>do you want to add tuturials in videos, sites ?</p>
+        
+        <div class="yesOrNo-form">
+            <div id="yes-question">
+                <label for="yes-answer">yes</label>
+                <input 
+                type="radio" 
+                name="yesOrNo-form" 
+                id="yes-answer"
+                (click)="showTuturialForm()"
+                > 
+            </div>
+
+            <div id="no-question">
+                <label for="no-answer">no</label>
+                <input 
+                type="radio" 
+                name="yesOrNo-form" 
+                id="no-answer"
+                (click)="eraseTuturialForm()">
+            </div>
+        </div>
+
+        <div class="tutorial-form-container" *ngIf="showTutorialFormOrNot">
+            <app-tutorial-form></app-tutorial-form>
+        </div>
+    </section>
+    
+</form>

@@ -1,0 +1,190 @@
+form {
+    display: flex; 
+    flex-direction: column;
+    margin-bottom: 20vh;
+    align-items: center; /* temporário */
+    border: 3px solid var(--color_default_ligthBlue);
+    border-radius: 0.5rem;
+    padding: 1rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 45%;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    
+    label {
+        align-self: flex-start;
+        text-transform: capitalize;
+        font-style: italic;
+    }
+    
+    input {
+        width: 50%;
+        padding: 0.5rem;
+        width: 100%;
+    }
+
+    input, textarea {  
+        border: 3px solid var(--color_default_ligthBlue);
+        border-radius: 0.3rem;
+        padding: 1rem;
+    }
+
+    p.error {
+        color: crimson;
+        span {
+            font-weight: bolder;
+
+        }
+    }
+
+    section.basic-informations,
+    section.principal-informations,
+    section.numeric-informations {
+        width: 100%;
+    }
+
+    section.basic-informations {
+        display: flex;
+        gap: 1rem;
+        margin-bottom: 1rem;
+        flex-direction: column;
+        
+        div#color-container, div#category-container,div.name-container {
+            display: flex;
+            flex-direction: column; 
+        }
+
+        div#basic-input-container {
+            display: flex;
+            gap: 1rem;
+        }
+
+        div#description-container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        textarea {
+            max-width: 100%;
+            min-width: 50%;
+            max-height: 500px;
+            min-height: 200px;
+        }
+    }
+
+    section.principal-informations {
+        display: flex;
+        margin-bottom: 1rem;
+        gap: 1rem;
+
+        div#brand-Model_container,div#manufacturer-price_container {
+            display: flex;
+            gap: 1rem;
+            flex-direction: column;
+
+            div#brand-container,
+            div#model-container,
+            div#manufacturer-container,
+            div#price-container {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    }
+
+    section.numeric-informations {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 1rem;
+        gap: 1rem;
+
+        div#purchased-validity_container {
+            flex-direction: column;
+        }
+        div#length-quantity_container {
+            flex-direction: row;
+        }
+        div#purchased-validity_container,div#length-quantity_container {
+            display: flex;
+            gap: 1rem;
+
+            div#purchasedIn-container,
+            div#validity-container,
+            div#length-container,
+            div#quantity-container {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    }   
+
+    section.product-image-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border: 3px solid var(--color_default_ligthBlue);
+        margin-bottom: 1rem;
+        width: 100%;
+        height: 50vh;
+        
+        label {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            cursor: pointer;
+            
+            img {
+                align-self: center;
+                width: 20%;
+                max-width: 100%;
+            }
+
+            span {
+                color: var(--color_default_ligthBlue);
+            }
+        }
+
+        input[type="file"] {
+            display: none;
+        }
+    }
+
+    section.tutorial-links-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        div.yesOrNo-form {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+
+            div#yes-question {
+                display: flex;
+                gap: 1rem;
+            }
+
+            div#no-question {
+                display: flex;
+                gap: 1rem;
+            }
+        }
+
+        div.tutorial-form-container {
+            margin-bottom: 1rem;
+            width: 100%;
+        }
+    }
+}
+
+label.labelWithUserImg {
+    align-items: center;
+    justify-content: center;
+    height: 50vh;
+
+    img#image {
+        width: 100%;
+        height: 50vh;
+    }
+}

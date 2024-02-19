@@ -1,0 +1,50 @@
+<form *ngIf="deleteFormOrNot">
+    <div class="tutorial-informations">
+        <div id="name-container">
+            <label for="tutorialNameId">name</label>
+            <input type="text" name="tutorialName" id="tutorialNameId">
+        </div>
+
+        <div id="description-container">
+            <label for="tutorialDescriptionId">description</label>
+            <textarea 
+            name="tutorialDescription" 
+            id="tutorialDescriptionId" 
+            cols="10" 
+            rows="5">
+            </textarea>
+        </div>
+    </div>
+
+    <fieldset class="tutorialLinks-container">
+        <legend>tutorial links</legend>
+
+        <div id="input-links-container">
+            <div *ngFor="let i of tutorialLinksVector" class="input-container">
+                <input 
+                type="url" 
+                class="tutorialLink"
+                placeholder="{{i.placeHolder}}"
+                >
+
+                <button 
+                (click)="eraseInput(i.id)" 
+                class="button-earase-input" 
+                type="button"
+                >delete</button>
+            </div>
+        </div>
+
+        <app-button-template
+        [buttonName]="'one more link'"
+        [buttonFunction]="'tutorialForm-addOneMoreInput'"
+        (addMoreOneInput)="addMoreOneInput($event)"
+        ></app-button-template>
+    </fieldset>    
+
+    <div class="delete-form-container">
+        <button (click)="deleteForm()" class="erase-tutorial-form">delete form</button>
+    </div>
+</form>
+
+
