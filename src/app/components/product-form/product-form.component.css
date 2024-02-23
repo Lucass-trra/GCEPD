@@ -131,6 +131,7 @@ form {
             flex-direction: column;
             width: 100%;
             cursor: pointer;
+            text-align: center;
             
             img {
                 align-self: center;
@@ -170,8 +171,14 @@ form {
         }
 
         div.tutorial-form-container {
+            display: flex;
+            flex-direction: column;
             margin-bottom: 1rem;
             width: 100%;
+
+            app-tutorial-form {
+                width: 524px;
+            }
         }
     }
 }

@@ -1,21 +1,21 @@
 <header>
     <section class="header-links-container">
         <menu>
-            <li><a href="#">GCEPD</a></li>
-            <li><a [routerLink]="['reports']">Relatórios</a></li>
+            <li><a [routerLink]="['']">GCEPD</a></li>
+            <li><a [routerLink]="['/reports']">Relatórios</a></li>
         </menu>
     </section>
 
     <section class="header-button-container">
         <a 
         class="header-anchor"
-        [routerLink]="['user/register']"
+        [routerLink]="['/user/register']"
         *ngIf="hasSignUpButton"
         >sign-up</a>
 
         <a 
         class="header-anchor"
-        [routerLink]="['product/register']"
+        [routerLink]="['/product/register']"
         *ngIf="hasNewProductButton"
         >new product</a>
     </section>

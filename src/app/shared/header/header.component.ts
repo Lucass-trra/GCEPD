@@ -15,10 +15,10 @@ import { ButtonTemplateComponent } from "../../components/button-template/button
   styleUrl: './header.component.css'
 })
 export class HeaderComponent implements OnChanges {
-  @Input() signUpButton: boolean = false;
+  @Input() signUpButton: boolean = true;
   @Input() newProduct: boolean = true;
   
-  hasSignUpButton:boolean = false;
+  hasSignUpButton:boolean = true;
   hasNewProductButton:boolean = true
 
   constructor() {

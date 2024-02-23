@@ -1,0 +1,36 @@
+main  {
+    display: flex;
+    gap: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+
+    section.userRegister-presentation {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 50%;
+
+        figure {
+            display: flex; 
+            justify-content: center;
+            margin-bottom: 1rem;
+    
+            img {
+                width: 50%;
+            }
+        }
+
+        h2 {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color:  var(--color_default_darkBlue);
+        }
+    }
+
+    section.userRegister-from-container {
+        width: 50%; 
+        display: flex;
+        flex-direction: column;
+    }
+
+}

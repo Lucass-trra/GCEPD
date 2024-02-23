@@ -6,8 +6,7 @@ section.form-container {
     padding-top: 1.5rem;
     padding-bottom: 1rem;
     align-items: center;
-    width: 50%;
-    border: 1px solid var(--color_default_black);
+   
     box-shadow: 1rem 1rem 1rem 0rem rgba(0, 0, 0, 0.1) ;
     border-radius: 0.5rem;
 
