@@ -1,15 +1,17 @@
 <section class="card-container">
-    <header>
-        <h4 class="product-name">{{productName}}</h4>
-        <span class="product-validity">{{validity}}</span>
-    </header>
-
-    <figure class="image-container">
-        <img src="{{img}}" alt="{{productName}}">
-    </figure>
-
-    <div class="main-informations">
-        <span class="brand-name">{{brand}}</span>
-        <span class="quantity-name">quantity: {{quantity}}</span>
-    </div>
+    <a [routerLink]="['product/details', id]">
+        <header>
+            <h4 class="product-name">{{productName}}</h4>
+            <span class="product-validity">{{validity}}</span>
+        </header>
+    
+        <figure class="image-container">
+            <img src="{{img}}" alt="{{productName}}">
+        </figure>
+    
+        <div class="main-informations">
+            <span class="brand-name">{{brand}}</span>
+            <span class="quantity-name">quantity: {{quantity}}</span>
+        </div>
+    </a>
 </section>

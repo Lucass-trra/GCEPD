@@ -7,9 +7,7 @@ form {
     border-radius: 0.5rem;
     padding: 1rem;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    width: 45%;
     margin-top: 1rem;
-    margin-left: 1rem;
     
     label {
         align-self: flex-start;

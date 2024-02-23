@@ -10,7 +10,7 @@ header {
     height: 15vh;
     
     section.header-links-container {
-        ul {
+        menu {
             display: flex;
             list-style: none;
             gap: 1rem;
@@ -34,5 +34,22 @@ header {
     section.header-button-container {
         display: flex;
         gap: 1rem;
+
+        a {
+            background-color: var(--color_default_white);
+            color: var(--color_default_black);
+            padding: .5rem;
+            text-decoration: none;
+            border-radius: .5rem;  
+            transition: .4s ease-in-out;
+        }
+
+        a:hover {
+            box-shadow: inset 5rem 5rem 0rem 0rem var(--color_default_ligthBlue);
+        }
+
+        a:active {
+            
+        }
     }
 }

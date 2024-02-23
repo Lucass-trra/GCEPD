@@ -1,20 +1,22 @@
 <header>
     <section class="header-links-container">
-        <ul>
-            <li><a href="">GCEPD</a></li>
-            <li><a href="">Relatórios</a></li>
-        </ul>
+        <menu>
+            <li><a href="#">GCEPD</a></li>
+            <li><a [routerLink]="['reports']">Relatórios</a></li>
+        </menu>
     </section>
 
     <section class="header-button-container">
-        <app-button-template 
-        [buttonName]="'sign-up'" 
-        [buttonFunction]="'sign-up'" 
-        ></app-button-template>
+        <a 
+        class="header-anchor"
+        [routerLink]="['user/register']"
+        *ngIf="hasSignUpButton"
+        >sign-up</a>
 
-        <app-button-template 
-        [buttonName]="'new product'" 
-        [buttonFunction]="'new_product'"
-        ></app-button-template>
+        <a 
+        class="header-anchor"
+        [routerLink]="['product/register']"
+        *ngIf="hasNewProductButton"
+        >new product</a>
     </section>
 </header>

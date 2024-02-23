@@ -7,14 +7,25 @@ section.card-container {
     border-radius: .5rem;
     gap: 1rem;
 
+    a {
+        text-decoration: none;
+        color: var(--color_default_black);
+        transition: .4s ease-in-out;
+    }
+
+    a:hover {
+        box-shadow: 10px 10px 10px 0px var(--color_default_black);
+    }
+
     header {
         display: flex;
         padding-left: 1rem;
         padding-right: 1rem;
         justify-content: space-between;
+        margin-bottom: .5rem;
 
         h4 {
-            font-size: 2rem;
+            font-size: 1.2rem;
             font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
         }
     }
@@ -23,6 +34,7 @@ section.card-container {
         width: 100%;
         padding-left: 1rem;
         padding-right: 1rem;
+        margin-bottom: 0.5rem;
 
         img {
             width: 100%;
@@ -38,8 +50,11 @@ section.card-container {
         color: var(--color_default_white);
         gap: 1rem;
 
-        span {
+
+        span, span.quantity-name {
             width: 50%;
+            text-align: center;
+            align-self: center;
         }
     }
 

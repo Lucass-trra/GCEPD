@@ -28,7 +28,7 @@ aside {
         margin-bottom: 1rem;
         
         a {
-            width: 80%;
+            width: 70%;
             padding: .4rem;
             text-align: center;
             font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -43,6 +43,28 @@ aside {
             border-bottom-right-radius: .5rem;
             box-shadow:inset 0rem 2.5rem 0rem 0rem var(--color_default_mediumBlue);
             filter: brightness(.9);
+        }
+
+        div {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            button {
+                background-color: var(--color_default_ligthBlue);
+                width: 20%;
+                border-radius: 0.3rem;
+                border: transparent;
+                transition: .4s ease-in-out;
+                cursor: pointer;
+
+                img {
+                    width: 40%;
+                }
+            }
+
+            button:hover {
+                background-color: rgb(243, 72, 106);
+            }
         }
     }
 

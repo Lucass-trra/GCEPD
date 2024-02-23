@@ -4,12 +4,16 @@
     </div>  
 
     <section class="user-categories">
-        <a 
-        *ngFor="let c of categoriesList"
-        href=""
-        >
-        {{c.name}}
-        </a>
+        <div *ngFor="let c of categoriesList">
+            <a 
+            [routerLink]="['category', c.id ]"
+            >
+            {{c.name}}
+            </a>
+            <button (click)="deleteCategory(c.id)" >
+                <img src="../../../assets/trash.png" alt="trash icon">
+            </button>
+        </div>
     </section>
 
     <div class="inputToAddCategory">
