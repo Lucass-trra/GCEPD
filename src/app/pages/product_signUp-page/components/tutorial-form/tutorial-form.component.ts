@@ -1,15 +1,15 @@
 import { Component} from '@angular/core';
 import { CommonModule } from "@angular/common";
 
-import { TutorialLinks } from "../../../types";
+import { TutorialLinks } from "../../../../../types";
 
 //button component
-import { ButtonTemplateComponent } from "../../components/button-template/button-template.component";
+import { SharedModule } from "../../../../shared/shared.module";
 
 @Component({
   selector: 'app-tutorial-form',
   standalone: true,
-  imports: [ButtonTemplateComponent,CommonModule],
+  imports: [SharedModule,CommonModule],
   templateUrl: './tutorial-form.component.html',
   styleUrl: './tutorial-form.component.css'
 })

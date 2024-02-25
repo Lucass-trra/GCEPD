@@ -7,16 +7,15 @@ import {
   Validators 
 }from "@angular/forms";
 
-//button component
-import { ButtonTemplateComponent } from "../../components/button-template/button-template.component";
-
+//shared components
+import { SharedModule } from "../../../../shared/shared.module";
 //tutorial form component 
 import { TutorialFormComponent } from "../tutorial-form/tutorial-form.component";
 
 @Component({
   selector: 'app-product-form',
   standalone: true,
-  imports: [ReactiveFormsModule,CommonModule,ButtonTemplateComponent,TutorialFormComponent],
+  imports: [ReactiveFormsModule,CommonModule,TutorialFormComponent,SharedModule],
   templateUrl: './product-form.component.html',
   styleUrl: './product-form.component.css'
 })

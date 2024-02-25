@@ -3,8 +3,8 @@ import { CommonModule } from "@angular/common";
 import { FormsModule } from "@angular/forms";
 import { RouterLink } from '@angular/router';
 
-import { ButtonTemplateComponent } from "../../components/button-template/button-template.component";
-import { category } from '../../../types';
+import { ButtonTemplateComponent } from '../../../../shared/button-template/button-template.component'
+import { category } from '../../../../../types';
 
 @Component({
   selector: 'app-aside-category',

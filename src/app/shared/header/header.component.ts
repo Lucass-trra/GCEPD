@@ -3,7 +3,7 @@ import { RouterLink } from "@angular/router";
 import { CommonModule } from "@angular/common";
 
 //button component
-import { ButtonTemplateComponent } from "../../components/button-template/button-template.component";
+import { ButtonTemplateComponent } from "../button-template/button-template.component";
 
 //services
 

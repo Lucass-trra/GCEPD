@@ -1,1 +1,28 @@
-<p>product-details-page works!</p>
+<header>
+    <app-header
+    [signUpButton]="false"
+    ></app-header>
+</header>
+
+<main>
+    <section class="product-presentation">
+        <h1>Name</h1>
+        <span>category</span>
+    </section>
+
+    <section class="dateAndDescription" #dateAndDescription>
+     
+    </section>
+</main>
+
+<template #templateDateInformations>
+    <div class="dateInformations">
+        <figure>
+            <img src="" alt="">
+        </figure>
+
+        <span></span>
+
+        <h3></h3>
+    </div>
+</template>

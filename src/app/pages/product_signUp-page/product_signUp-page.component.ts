@@ -1,14 +1,15 @@
 import { Component } from '@angular/core';
 
-//product form component
-import { ProductFormComponent } from "../../components/product-form/product-form.component";
+//components module
+import { ComponentsModule } from "./components/components.module";
 
 //header component
-import { HeaderComponent } from "../../shared/header/header.component";
+import { SharedModule } from "../../shared/shared.module";
+
 @Component({
   selector: 'app-product-sign-up-page',
   standalone: true,
-  imports: [ProductFormComponent,HeaderComponent],
+  imports: [ComponentsModule,SharedModule],
   templateUrl: './product_signUp-page.component.html',
   styleUrl: './product_signUp-page.component.css'
 })
