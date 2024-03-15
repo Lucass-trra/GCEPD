@@ -16,23 +16,24 @@ export type product = {
 
     name:string 
     category:string
-
-    purchased_in:Date
-    last_change:Date
-    validity:Date 
-
-    description:string
-
+    
     color:string
     brand:string
     model:string 
     manufacturer:string
 
-    price: number
-    length:number
-    quantity:string  
-
     img:string 
+    
+    description:string  
+    
+    purchased_in:Date
+    last_change:Date
+    validity:Date 
+    
+    price: number
+    length:number   
+    quantity:string  
+    
 }
 
 export type DateInformations = {
@@ -40,3 +41,9 @@ export type DateInformations = {
     DateTitle:string,
     dateInformation:string
 }
+
+export type ImageInfo = {
+    id: number
+    src:string
+    alt:string
+  }

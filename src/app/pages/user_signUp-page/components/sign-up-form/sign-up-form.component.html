@@ -69,7 +69,8 @@
           <button type="submit">Submit</button>
     </form>
 
-   <div class="user-welcome" *ngIf="signUpForm.get('name')?.value.length > 0 ">
-       welcome {{signUpForm.get('name')?.value}}
+     
+    <div class="user-welcome" *ngIf="signUpForm.get('name')">
+      welcome {{signUpForm.get('name')?.value}}
    </div>
 </section>

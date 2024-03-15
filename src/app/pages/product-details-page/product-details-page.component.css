@@ -3,19 +3,165 @@ header {
 }
 
 main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
     section.product-presentation {
         display: flex;
         justify-content: center;
         align-items: center;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         gap: 3rem;
+        margin-bottom: 2rem;
 
         h1,span {
-            font-size: 1.6rem;
+            font-size: 1.6rem;  
         }
         span {
             color: crimson;
             
+        }
+    }
+
+    section.photos {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 2rem;
+
+        figure#principal-photo {
+            width: 50%;
+
+            img {
+                width: 100%;
+            }
+
+        }
+
+        figure,img{
+            border-radius: 0.5rem;
+        }
+
+
+        div#secundary-photos-container {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+
+            button.image-next {
+                border: transparent;
+                background-color: transparent;
+                font-size: 1.4rem;
+                transition: .2s ease-in-out;
+                cursor: pointer;
+            }
+            
+            button.image-next:hover {
+                background-color: var(--color_default_ligthBlue);
+                padding: 0.2rem;
+                border-radius: 0.5rem;
+            }
+            
+            div#secundary-photos {
+                overflow-x: hidden;
+                white-space: nowrap;
+                width: 80%;
+            
+                button.small-image {
+                    cursor: pointer;    
+                    background-color: transparent;
+                    border: transparent;
+                    transition: .2s ease-in-out;
+
+                    width: 10%; 
+                    height: auto;
+                    margin-right: .5rem;
+
+                    img {
+                        width: 100%;
+                    }
+                }
+/*                 
+                button.small-image:hover {
+                    transform: scale(1.1);
+                } */
+             
+            }
+        }
+    }
+
+    section.description-dateInfo {
+        width: 90%;
+        display: flex;
+        justify-content: center;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        margin-bottom: 2rem;
+
+        p {
+            display: flex;
+            align-items: center;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 1rem;
+            border-top: 2px solid var(--color_default_black);
+            border-bottom: 2px solid var(--color_default_black);
+            text-indent: 10%;
+            width: 80%;
+        }
+
+        div.dateInfos {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+ 
+    
+            app-card-template {
+                width: 50%;
+            }
+        }
+    
+    }
+
+    section.technical-information {
+        display: flex;
+        justify-content: center;
+        
+        div#color-brand {
+            width: 40%;
+            display: flex;
+            gap: 1rem;
+            flex-direction: row;
+            align-items: center;
+
+            app-card-template {
+                width: 50%;
+            }
+        }
+
+        div#model-manufacturer {
+            width: 40%;
+            display: flex;
+            gap: 1rem;
+            flex-direction: row;
+            align-items: center;
+
+            app-card-template {
+                width: 50%;
+            }
+        }
+    }
+
+    section.quantity-infos {
+        width: 90%;
+        display: flex;
+        gap: .5rem;
+        justify-content: space-between;
+
+        app-card-template {
+            width: 25%;
         }
     }
 }

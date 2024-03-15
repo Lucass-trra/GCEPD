@@ -10,19 +10,110 @@
         <span>category</span>
     </section>
 
-    <section class="dateAndDescription" #dateAndDescription>
-     
-    </section>
-</main>
+    <section class="technical-information">
+        <div id="color-brand">
+            <app-card-template
+            [imageCard]="'../../../../../assets/product-details/color.png'"
+            [titleCard]="'color'"
+            [infoCard]="'red'"
+            ></app-card-template>
 
-<template #templateDateInformations>
-    <div class="dateInformations">
-        <figure>
-            <img src="" alt="">
+            <app-card-template
+            [imageCard]="'../../../../../assets/product-details/brand.png'"
+            [titleCard]="'brand'"
+            [infoCard]="'sony'"
+            ></app-card-template>
+        </div>
+        
+        <div id="model-manufacturer">
+            <app-card-template
+            [imageCard]="'../../../../../assets/product-details/model.png'"
+            [titleCard]="'model'"
+            [infoCard]="'panasonic'"
+            ></app-card-template>
+
+            <app-card-template
+            [imageCard]="' ../../../../../assets/product-details/manufacturer.png'"
+            [titleCard]="'manufacturer'"
+            [infoCard]="'logiTech'"
+            ></app-card-template>
+        </div>
+    </section>
+    
+    <section class="photos">
+        <figure id="principal-photo">
+            <img #principalPhotoReference src="{{bigImage.src}}" alt="{{bigImage.alt}}">
         </figure>
 
-        <span></span>
+        <div id="secundary-photos-container">
+            <button 
+            id="scroll-left" 
+            class="image-next"
+            (click)="scrollPhotosList(1)"
+            > &lt; </button> 
 
-        <h3></h3>
-    </div>
-</template>
+            <div id="secundary-photos" #secundaryPhotosReference>   
+                <button 
+                *ngFor="let i of smallImages"
+                class="small-image" 
+                (click)="substituteImage(i.id)"
+                >
+                   <img src="{{i.src}}" alt="{{i.alt}}">
+                </button>
+            </div>
+
+            <button 
+            id="scroll-rigth" 
+            class="image-next"
+            (click)="scrollPhotosList(2)"
+            > &gt; </button>
+        </div>
+
+    </section>
+
+
+    <section class="description-dateInfo">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias quia maxime ullam quisquam, ducimus perferendis? Laboriosam laudantium tenetur asperiores facere ullam beatae et fuga expedita ipsam! Nesciunt voluptas eaque consequuntur?
+        Dicta debitis optio sit eum quae nam quidem odit vitae harum doloremque. Suscipit illum voluptatum, commodi, expedita molestias magni similique minus architecto ab tempore consectetur ratione libero eum sit dignissimos.</p>
+
+        <div class="dateInfos">
+            <app-card-template
+            [imageCard]="'../../../../../assets/product-details/shopping-cart.png'"
+            [titleCard]="'purchased in'"
+            [infoCard]="'20/02/2010'"
+            ></app-card-template>
+
+            <app-card-template
+            [imageCard]="'../../../../../assets/product-details/last_change_icon.png'"
+            [titleCard]="'last change'"
+            [infoCard]="'20/02/2011'"
+            ></app-card-template>
+
+            <app-card-template
+            [imageCard]="'../../../../../assets/product-details/product_validity.png'"
+            [titleCard]="'validity'"
+            [infoCard]="'20/02/2012'"
+            ></app-card-template>
+        </div>
+    </section>
+
+    <section class="quantity-infos">
+        <app-card-template
+        [imageCard]="'../../../../../assets/product-details/price.png'"
+        [titleCard]="'price'"
+        [infoCard]="'200$'"
+        ></app-card-template>
+
+        <app-card-template
+        [imageCard]="'../../../../../assets/product-details/ruler.png'"
+        [titleCard]="'lenght'"
+        [infoCard]="'2m'"
+        ></app-card-template>
+
+        <app-card-template
+        [imageCard]="'../../../../../assets/product-details/quantity.png'"
+        [titleCard]="'quantity'"
+        [infoCard]="'30'"
+        ></app-card-template>
+    </section>
+</main>

@@ -25,14 +25,6 @@ export class ButtonTemplateComponent implements OnChanges {
       case 'new_category':
         this.showInput.emit(true)
       break;
-    
-      case 'sign-up':
-        console.log("hello sign-up")
-      break;
-
-      case 'new_product':
-        console.log("hello new product")
-      break;
       
       case 'tutorialForm-addOneMoreInput':
         this.addMoreOneInput.emit("ex: https://example.com")

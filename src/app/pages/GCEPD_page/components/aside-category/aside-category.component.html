@@ -1,8 +1,4 @@
 <aside>
-    <div class="categories-presentation">
-        <h3>product categories</h3>
-    </div>  
-
     <section class="user-categories">
         <div *ngFor="let c of categoriesList">
             <a 
@@ -23,13 +19,12 @@
         (blur)="addItenToList()"
         *ngIf="isInputVisible">
     </div>
-
-    <div class="button-addCategory-container">
-        <app-button-template
-        [buttonName]="'new category'"
-        [buttonFunction]="'new_category'"
-        (showInput)="showInputToAddCategory($event)"
-        ></app-button-template>
-    </div>
-
 </aside>
+
+<div class="button-addCategory-container">
+    <app-button-template
+    [buttonName]="'new category'"
+    [buttonFunction]="'new_category'"
+    (showInput)="showInputToAddCategory($event)"
+    ></app-button-template>
+</div>

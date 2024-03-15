@@ -4,7 +4,7 @@ section.button-container {
     button {
         padding: .7rem;
         background-color: var(--color_default_ligthBlue);
-        border-radius: .5rem;
+        border-radius: 2rem;
         border: transparent;
         transition: 0.6s;
         cursor: pointer;

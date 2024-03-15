@@ -1,24 +1,11 @@
 aside {
     display: flex;
     flex-direction: column;
-    border-radius: 0.5rem;
+    border-radius: 2rem;
     background-color: var(--color_default_mediumBlue);
-    min-height: 50vh;
-    max-height: 100vh;
-
-
-    div.categories-presentation {
-        padding: 1rem;
-        border-bottom-left-radius: 1rem;
-        border-bottom-right-radius: 1rem;
-        background-color: var(--color_default_white);
-        margin-bottom: 1rem;
-        text-align: center;
-
-        h3 {
-            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-        }
-    }
+    min-height: 13vh;
+    max-height: 20vh;
+    margin-bottom: 1rem;
 
     section.user-categories {     
         display: flex;

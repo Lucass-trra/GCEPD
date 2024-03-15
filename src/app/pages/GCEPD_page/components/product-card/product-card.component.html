@@ -2,7 +2,6 @@
     <a [routerLink]="['product/details', id]">
         <header>
             <h4 class="product-name">{{productName}}</h4>
-            <span class="product-validity">{{validity}}</span>
         </header>
     
         <figure class="image-container">
@@ -10,8 +9,7 @@
         </figure>
     
         <div class="main-informations">
-            <span class="brand-name">{{brand}}</span>
-            <span class="quantity-name">quantity: {{quantity}}</span>
+            <p>stock: <span class="quantity-name">{{quantity}}</span></p>
         </div>
     </a>
 </section>

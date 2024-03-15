@@ -12,17 +12,20 @@ header {
 
 main {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     padding: 1rem;
     gap: 1rem;
 
     section#aside-category-container {
-        width: 30%;
+        width: 100%;
     }
 
     section#product-cards-container {
         display: grid;
         gap: 1rem;
-        grid-template-columns: 1fr 1fr 1fr;
-        width: 70%;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+
     }
 }

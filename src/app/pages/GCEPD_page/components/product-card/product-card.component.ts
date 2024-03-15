@@ -11,7 +11,7 @@ import { RouterLink } from "@angular/router";
 export class ProductCardComponent {
   @Input() id: number = 9
   @Input() productName:string = "product 1"
-  @Input() validity:string = "3/9/2022"
+  @Input() validity:string = "9/2022"
   @Input() brand:string = "brand"
   @Input() img:string = "https://picsum.photos/id/1020/600/400"
   @Input() quantity:string = "6"

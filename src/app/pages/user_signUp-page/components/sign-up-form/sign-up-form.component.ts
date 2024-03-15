@@ -31,6 +31,7 @@ export class SignUpFormComponent implements OnInit {
   showLoginForm() {
     this.showOrNotForm = true;
     this.signUpForm.reset();
+
   }
   
   showSignUpForm() {

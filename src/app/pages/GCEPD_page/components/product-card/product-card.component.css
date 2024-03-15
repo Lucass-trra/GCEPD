@@ -44,17 +44,21 @@ section.card-container {
 
     div.main-informations {
         display: flex;
-        justify-content: space-between;
+        justify-content: flex-end;
         padding: 1rem;
         background-color: var(--color_default_darkBlue);
         color: var(--color_default_white);
         gap: 1rem;
 
-
-        span, span.quantity-name {
+        span.quantity-name, p {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             width: 50%;
-            text-align: center;
-            align-self: center;
+            letter-spacing: 1px;
+            text-align: end;
+        }
+
+        span.quantity-name{
+            font-weight: bolder;
         }
     }
 
