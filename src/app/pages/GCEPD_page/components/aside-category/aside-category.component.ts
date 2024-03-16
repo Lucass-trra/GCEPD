@@ -1,28 +1,37 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
 import { CommonModule } from "@angular/common";
 import { FormsModule } from "@angular/forms";
 import { RouterLink } from '@angular/router';
 
-import { ButtonTemplateComponent } from '../../../../shared/button-template/button-template.component'
 import { category } from '../../../../../types';
+
+
 
 @Component({
   selector: 'app-aside-category',
   standalone: true,
-  imports: [ButtonTemplateComponent,CommonModule,FormsModule,RouterLink],
+  imports: [CommonModule,FormsModule,RouterLink],
   templateUrl: './aside-category.component.html',
   styleUrl: './aside-category.component.css'
 })
 
-export class AsideCategoryComponent {
-  inputValue:string = ''
-  isInputVisible:boolean = false
+export class AsideCategoryComponent implements AfterViewInit {
+  btnAddCategoryHTML?: HTMLButtonElement;
+  @ViewChild('btnAddCategory', {static: false}) btnAddCategory?: ElementRef<HTMLButtonElement>;
 
-  categoriesList:Array<category> = []
+  userCategoriesHTML?: HTMLElement;
+  @ViewChild('userCategories', {static:false}) userCategories?: ElementRef<HTMLElement>;
+
+  
+  inputValue:string = '';
+  isInputVisible:boolean = false;
+  buttonContent:boolean  = true;
+
+  categoriesList:Array<category> = [];
 
   showInputToAddCategory(result: boolean) {
     this.isInputVisible = result
-  }
+  };
 
   addItenToList() {
     if (this.inputValue.trim() !== '') {
@@ -37,12 +46,35 @@ export class AsideCategoryComponent {
       this.isInputVisible = false
       this.inputValue = ''
     }
+  };
+
+  scrollLeft() {
+    if (this.userCategoriesHTML) {
+      this.userCategoriesHTML.scrollBy({left: -100, behavior:'smooth'})
+
+    } else {
+      console.error()
+    }
   }
 
-  deleteCategory(id:number) {
-    const categoryIndex:number = this.categoriesList.findIndex((c) => c.id == id)
-
-    this.categoriesList.splice(categoryIndex,1)
+  scrollRigth() {
+    if (this.userCategoriesHTML) {
+       this.userCategoriesHTML.scrollBy({left: 100, behavior:'smooth'})
+    } else {
+      console.error()
+    }
   }
+
+  ngAfterViewInit(): void {
+    if (this.btnAddCategory && this.userCategories) {
+      this.btnAddCategoryHTML = this.btnAddCategory.nativeElement;
+      this.userCategoriesHTML = this.userCategories.nativeElement;
+
+    } else {
+      console.error('The btnAddCategory or the userCategoriesHTML was not loaded or it does not exist in template');
+    }
+  }
+
+
 
 }

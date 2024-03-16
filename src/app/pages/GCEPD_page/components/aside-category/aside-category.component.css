@@ -1,77 +1,125 @@
-aside {
+@keyframes buttonAnimation {
+    0% {
+        transform: rotateZ(0deg);
+    }
+
+    50% {
+        transform: rotateZ(180deg);
+    }
+
+    100% { 
+        transform: rotateZ(360deg);
+    }
+}
+
+
+
+header.button-addCategory-container {
     display: flex;
-    flex-direction: column;
-    border-radius: 2rem;
-    background-color: var(--color_default_mediumBlue);
-    min-height: 13vh;
-    max-height: 20vh;
-    margin-bottom: 1rem;
+    margin-bottom: .6rem;
+    gap: 1rem;
+    margin-left: 4%;
 
-    section.user-categories {     
+    button#btn-add-category {
         display: flex;
-        flex-direction: column;
+        justify-content: center;
         align-items: center;
-        gap: 1rem;
-        margin-bottom: 1rem;
-        
-        a {
-            width: 70%;
-            padding: .4rem;
-            text-align: center;
-            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-            border-left: 5px solid var(--color_default_white);
-            text-decoration: none;
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        border: 1px solid var(--color_default_black);
+        background-color: var(--color_default_darkBlue);
+        transition: .4s ease-in-out;
+        cursor: pointer;
+
+        img {
+            width: 30px;
+        }
+
+        span {
             color: var(--color_default_white);
-            transition: .2s ease-in-out;
+            letter-spacing: 1px;
+            text-transform: capitalize;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-weight: bolder;
         }
-        
-        a:hover {
-            border-top-right-radius: .5rem;
-            border-bottom-right-radius: .5rem;
-            box-shadow:inset 0rem 2.5rem 0rem 0rem var(--color_default_mediumBlue);
-            filter: brightness(.9);
-        }
+    }
 
-        div {
-            display: flex;
-            justify-content: center;
-            width: 100%;
-            button {
-                background-color: var(--color_default_ligthBlue);
-                width: 20%;
-                border-radius: 0.3rem;
-                border: transparent;
-                transition: .4s ease-in-out;
-                cursor: pointer;
-
-                img {
-                    width: 40%;
-                }
-            }
-
-            button:hover {
-                background-color: rgb(243, 72, 106);
-            }
-        }
+    button#btn-add-category:hover {
+        animation: buttonAnimation 2s infinite ;
     }
 
     div.inputToAddCategory {
         display: flex;
-        justify-content: center;
-        margin-bottom: 1rem;
-        
+        align-items: center;
+        width: 25%;
+
         input {
             width: 70%;
             border: transparent;
-            border-bottom: 3px solid var(--color_default_black);
-            background-color: var(--color_default_mediumBlue);
-            padding: .5rem;
+            border-bottom: 2px solid var(--color_default_black);
+            padding: .3rem;
             outline: none;
         }
     }
+}
 
-    div.button-addCategory-container {
-        display: flex;
-        justify-content: center;
+aside {
+    display: flex;
+    height: 13vh;
+    gap: 0.5rem;
+    align-items: center;
+    margin-bottom: 1rem;
+
+    button.scroll-button {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: transparent;
+        cursor: pointer;
+        transition: .2s ease-in-out;
+        border: transparent;
+        font-size: 1.5rem;
+    }
+
+    button.scroll-button:hover {
+        background-color: var(--color_default_ligthBlue);
+    }
+
+
+    section.user-categories {       
+        overflow-x: hidden;
+        white-space: nowrap;
+        width: 100%;  
+        height: 13vh;
+        background-color: var(--color_default_mediumBlue);
+        border-radius: 2rem;
+        
+            a {
+                width: 80%;
+                text-decoration: none;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                color: var(--color_default_white);
+                margin-right: 1rem;
+                transition: .2s ease-in-out;
+                
+                border-top: 2px solid var(--color_default_white);
+                border-bottom: 2px solid var(--color_default_white);
+                
+                padding-bottom: 0.2rem; 
+                padding-top: 0.2rem;
+                padding-left: 1rem;
+                padding-right: 1rem;
+                
+                position: relative;
+                top: 30%;
+                left: 2%;
+            }
+
+            a:hover {
+                background-color: var(--color_default_white);
+                color: var(--color_default_black);
+                border-radius: 0.2rem;
+            }
     }
 }

@@ -46,4 +46,4 @@ export type ImageInfo = {
     id: number
     src:string
     alt:string
-  }
+}

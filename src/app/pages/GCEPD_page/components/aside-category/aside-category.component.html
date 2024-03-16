@@ -1,17 +1,14 @@
-<aside>
-    <section class="user-categories">
-        <div *ngFor="let c of categoriesList">
-            <a 
-            [routerLink]="['category', c.id ]"
-            >
-            {{c.name}}
-            </a>
-            <button (click)="deleteCategory(c.id)" >
-                <img src="../../../../../assets/trash.png" alt="trash icon">
-            </button>
-        </div>
-    </section>
+<header class="button-addCategory-container">
+    <button 
+    id="btn-add-category"
+    #btnAddCategory
+    (click)="showInputToAddCategory(true)"
+    >
+    <img *ngIf="buttonContent" src="../../../../../assets/plus.png" alt="plus icon">
 
+    <span *ngIf="!buttonContent"> new category</span>
+    </button>
+    
     <div class="inputToAddCategory">
         <input 
         type="text" 
@@ -19,12 +16,25 @@
         (blur)="addItenToList()"
         *ngIf="isInputVisible">
     </div>
-</aside>
+</header>
 
-<div class="button-addCategory-container">
-    <app-button-template
-    [buttonName]="'new category'"
-    [buttonFunction]="'new_category'"
-    (showInput)="showInputToAddCategory($event)"
-    ></app-button-template>
-</div>
+<aside>
+    <button 
+    (click)="scrollLeft()"
+    id="scroll-left" 
+    class="scroll-button"> < </button>
+
+    <section class="user-categories" #userCategories>
+        <a 
+        *ngFor="let c of categoriesList"
+        [routerLink]="['category', c.id ]"
+        >
+        {{c.name}}
+        </a>
+    </section>
+
+    <button 
+    (click)="scrollRigth()"
+    id="scroll-rigth" 
+    class="scroll-button"> > </button>
+</aside>

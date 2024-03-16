@@ -2,15 +2,12 @@ import { Component, Input, OnChanges } from '@angular/core';
 import { RouterLink } from "@angular/router";
 import { CommonModule } from "@angular/common";
 
-//button component
-import { ButtonTemplateComponent } from "../button-template/button-template.component";
-
 //services
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [ButtonTemplateComponent,CommonModule,RouterLink],
+  imports: [CommonModule,RouterLink],
   templateUrl: './header.component.html',
   styleUrl: './header.component.css'
 })

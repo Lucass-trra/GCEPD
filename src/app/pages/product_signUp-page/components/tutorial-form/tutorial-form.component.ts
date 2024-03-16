@@ -3,13 +3,11 @@ import { CommonModule } from "@angular/common";
 
 import { TutorialLinks } from "../../../../../types";
 
-//button component
-import { SharedModule } from "../../../../shared/shared.module";
 
 @Component({
   selector: 'app-tutorial-form',
   standalone: true,
-  imports: [SharedModule,CommonModule],
+  imports: [CommonModule],
   templateUrl: './tutorial-form.component.html',
   styleUrl: './tutorial-form.component.css'
 })
