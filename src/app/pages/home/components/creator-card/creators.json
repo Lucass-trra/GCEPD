@@ -1,0 +1,30 @@
+{
+    "creators": { 
+        "name1": {
+            "title": "lucas",
+            "profilePhoto": "../../../../../assets/profile-picture.png",
+            
+            "about": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt quas hic non reprehenderit suscipit enim adipisci excepturi provident officia porro eveniet blanditiis nisi inventore neque amet eius natus, dolor dolorem.Quas, fugiat perferendis alias officiis aliquam facilis eligendi non nulla, magni mollitia provident hic! Neque eveniet excepturi, ex modi illum eum deserunt voluptas? Non aperiam maiores sunt temporibus reiciendis dolorem.",
+
+            "socialLinks": [
+                {
+                    "href": "#", 
+                    "img": "../../../../../assets/profile-picture.png",
+                    "alt": "social media name"
+                },
+
+                {
+                    "href": "#", 
+                    "img": "../../../../../assets/profile-picture.png",
+                    "alt": "social media name"
+                },
+
+                {
+                    "href": "#", 
+                    "img": "../../../../../assets/profile-picture.png",
+                    "alt": "social media name"
+                }
+            ]
+        }
+    }
+}

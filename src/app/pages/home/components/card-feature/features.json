@@ -1,0 +1,45 @@
+{
+    "features": {
+        "feature1": {
+            "title": "feature name",
+            "title2": "feature name",
+
+            "icon": "../../../../../assets/profile-picture.png",
+
+            "icon2": "../../../../../assets/profile-picture.png",
+
+            "pharagraph": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt quas hic non reprehenderit suscipit enim adipisci excepturi provident officia porro eveniet blanditiis nisi inventore neque amet eius natus, dolor dolorem.Quas, fugiat perferendis alias officiis aliquam facilis eligendi non nulla, magni mollitia provident hic! Neque eveniet excepturi, ex modi illum eum deserunt voluptas? Non aperiam maiores sunt temporibus reiciendis dolorem.",
+
+            "pharagraph2": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt quas hic non reprehenderit suscipit enim adipisci excepturi provident officia porro eveniet blanditiis nisi inventore neque amet eius natus, dolor dolorem.Quas, fugiat perferendis alias officiis aliquam facilis eligendi non nulla, magni mollitia provident hic! Neque eveniet excepturi, ex modi illum eum deserunt voluptas? Non aperiam maiores sunt temporibus reiciendis dolorem."
+        },
+
+        "feature2": {
+            "title": "feature name",
+
+            "pharagraph": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt quas hic non reprehenderit suscipit enim adipisci excepturi provident officia porro eveniet blanditiis nisi inventore neque amet eius natus, dolor dolorem.Quas, fugiat perferendis alias officiis aliquam facilis eligendi non nulla, magni mollitia provident hic! Neque eveniet excepturi, ex modi illum eum deserunt voluptas? Non aperiam maiores sunt temporibus reiciendis dolorem.",
+
+            "asidePhoto": "../../../../../assets/profile-picture.png"
+        },
+
+        "feature3": {
+            "title": "feature name",
+            "title2": "feature name",
+
+            "icon": "../../../../../assets/profile-picture.png",
+
+            "icon2": "../../../../../assets/profile-picture.png",
+
+            "pharagraph": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt quas hic non reprehenderit suscipit enim adipisci excepturi provident officia porro eveniet blanditiis nisi inventore neque amet eius natus, dolor dolorem.Quas, fugiat perferendis alias officiis aliquam facilis eligendi non nulla, magni mollitia provident hic! Neque eveniet excepturi, ex modi illum eum deserunt voluptas? Non aperiam maiores sunt temporibus reiciendis dolorem.",
+
+            "pharagraph2": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt quas hic non reprehenderit suscipit enim adipisci excepturi provident officia porro eveniet blanditiis nisi inventore neque amet eius natus, dolor dolorem.Quas, fugiat perferendis alias officiis aliquam facilis eligendi non nulla, magni mollitia provident hic! Neque eveniet excepturi, ex modi illum eum deserunt voluptas? Non aperiam maiores sunt temporibus reiciendis dolorem."
+        },
+
+        "feature4": {
+            "title": "feature name",
+
+            "pharagraph": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt quas hic non reprehenderit suscipit enim adipisci excepturi provident officia porro eveniet blanditiis nisi inventore neque amet eius natus, dolor dolorem.Quas, fugiat perferendis alias officiis aliquam facilis eligendi non nulla, magni mollitia provident hic! Neque eveniet excepturi, ex modi illum eum deserunt voluptas? Non aperiam maiores sunt temporibus reiciendis dolorem.",
+
+            "asidePhoto": "../../../../../assets/profile-picture.png"
+        }
+    }
+}

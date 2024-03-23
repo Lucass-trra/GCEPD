@@ -1,0 +1,25 @@
+<div class="resourcesGroup" #resourcesGroup>
+    <div class="feature-content">
+        <div id="stock-presentation">
+            <h3 #title>{{titleLoaded}}</h3>
+            <img *ngIf="!showDivOrNot" src="{{imgPresentation}}" alt="image-presentation-icon">
+        </div>
+        <p>
+            {{text}}
+        </p>
+    </div>
+
+    <div *ngIf="!showDivOrNot" class="feature-content">
+        <div id="stock-presentation">
+            <h3 #title2>{{title2Loaded}}</h3>
+            <img *ngIf="!showDivOrNot" src="{{imgPresentation2}}" alt="image-presentation-icon">
+        </div>
+        <p>
+            {{text2}}
+        </p>
+    </div>
+    
+    <figure *ngIf="showDivOrNot">
+        <img src="{{imgFigure}}" alt="figure-aside">
+    </figure>
+</div>

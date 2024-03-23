@@ -47,3 +47,9 @@ export type ImageInfo = {
     src:string
     alt:string
 }
+
+export type CreatorSocialLinks = {
+    href: string
+    img:string
+    alt:string
+}[];

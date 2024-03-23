@@ -5,6 +5,21 @@
     font-size: 1.2rem;
 }
 
+@keyframes topDownAnimation {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(10px);
+    }
+
+    100% {
+        transform: translateY(-10px);
+    }
+}
+
+
 :root {
     --color_default_white: #fff2ff;
     --color_default_black: #131313;

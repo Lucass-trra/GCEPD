@@ -1,0 +1,18 @@
+div#features-title {
+    width: 90%;
+    display: flex;
+    justify-content: start;
+
+    h2 {
+        width: 25%;
+        margin-right: 2rem;
+        text-align: end;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        letter-spacing: 2px;
+        font-size: 2rem;
+        color: var(--color_default_darkBlue);
+        text-transform: capitalize;
+        letter-spacing: 1px;
+        font-style: italic;
+    }
+} 

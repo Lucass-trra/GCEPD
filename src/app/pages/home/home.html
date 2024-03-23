@@ -1,0 +1,118 @@
+<header>
+    <app-header
+    [signUpButton]="false"
+    ></app-header>
+</header>
+
+<main>
+    <section id="about"> 
+        <div id="about-text">
+            <h1> welcome to GCEPD</h1>
+
+            <div id="description">
+                <h2>About</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus explicabo rem tenetur sunt quo rerum accusantium repudiandae nemo, fuga impedit delectus soluta modi debitis consequatur. Porro, quas libero! Sequi, eum.
+                Ullam quia hic veniam modi tenetur sed optio quo dolores in! Doloribus ad in exercitationem, sapiente enim, quis culpa nihil id delectus magnam qui. Soluta ab explicabo vero minima obcaecati?</p>
+            </div>
+
+            <div id="anchors">
+                <app-arrow-down-button
+                [hrefAnchor]="'#resources'"
+                ></app-arrow-down-button>
+
+                <a 
+                id="login-anchor"
+                href="#userRegister-from-container"
+                (click)="smoothAnimationAnchor()"
+                >Log-in
+                </a>
+            </div>
+        </div>
+
+        <div id="about-ilustrator">
+            <img src="../../../assets/homePage/warehouse.png" alt="warehouse-icon">
+        </div>
+    </section>
+
+    <section id="resources">
+        <app-section-title
+        [href]="'#creators'"
+        ></app-section-title>
+
+        <app-card-feature
+        class="align-start"
+        [backgroundWhite]="true"
+        [titleBlue]="true"
+        [hasFigureAside]="false"
+        [title]="featureInfo.feature1.title"
+        [title2]="featureInfo.feature1.title2"
+        [imgPresentation]="featureInfo.feature1.icon"
+        [imgPresentation2]="featureInfo.feature1.icon2"
+        [text]="featureInfo.feature1.pharagraph"
+        [text2]="featureInfo.feature1.pharagraph2"
+        ></app-card-feature>
+
+        <app-card-feature
+        [title]="featureInfo.feature2.title"
+        [text]="featureInfo.feature2.pharagraph"
+        [imgFigure]="featureInfo.feature2.asidePhoto"
+        class="align-end"
+        ></app-card-feature>
+
+        <app-card-feature
+        class="align-start"
+        [backgroundWhite]="true"
+        [titleBlue]="true"
+        [hasFigureAside]="false"
+        [title]="featureInfo.feature3.title"
+        [title2]="featureInfo.feature3.title2"
+        [imgPresentation]="featureInfo.feature3.icon"
+        [imgPresentation2]="featureInfo.feature3.icon2"
+        [text]="featureInfo.feature3.pharagraph"
+        [text2]="featureInfo.feature3.pharagraph2"
+        ></app-card-feature>
+
+        <app-card-feature
+        [title]="featureInfo.feature4.title"
+        [text]="featureInfo.feature4.pharagraph"
+        [imgFigure]="featureInfo.feature4.asidePhoto"
+        class="align-end"
+        ></app-card-feature>
+    </section>
+
+    <section id="creators">
+        <app-section-title
+        [title]="'creators'"
+        [href]="'#userRegister-from-container'"
+        ></app-section-title>
+
+        <app-creator-card
+        [creatorName]="creatorInfo.name1.title"
+        [creatorPhoto]="creatorInfo.name1.profilePhoto"
+        [creatorDescription]="creatorInfo.name1.about"
+        [creatorSocialLinks]="creatorInfo.name1.socialLinks"
+        [rowRverseStyle]="true"
+        ></app-creator-card>
+
+        <app-creator-card
+        [creatorName]="creatorInfo.name1.title"
+        [creatorPhoto]="creatorInfo.name1.profilePhoto"
+        [creatorDescription]="creatorInfo.name1.about"
+        [creatorSocialLinks]="creatorInfo.name1.socialLinks"
+        ></app-creator-card>
+    </section>
+
+    <section id="userRegister-from-container">
+        <div id="userRegister-figure">
+            <figure>
+                <img src="../../../assets/homePage/add-user.png" alt="user register image">
+            </figure>
+    
+            <h2>come to have your personal GCEPD</h2>
+        </div>
+
+        <div id="userRegister">
+            <app-sign-up-form></app-sign-up-form>
+        </div>
+    </section>
+</main>

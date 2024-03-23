@@ -1,0 +1,30 @@
+<article id="creator-container" #creatorContainer>
+    <figure>
+        <img src="{{creatorPhoto}}" alt="creator profile photo">
+        <figcaption>{{creatorName}}</figcaption>
+    </figure>
+
+    <div id="creator-infos">
+        <nav class="social-links">
+            <button 
+            *ngIf="hasButtonScroll"
+            id="scroll-left"
+            class="scroll-button" 
+            (click)="scrollButton(1)"> < </button>
+
+            <ul #unOderList>
+                <a href="{{s.href}}" *ngFor="let s of creatorSocialLinks">
+                    <img src="{{s.img}}" alt="{{s.alt}}">
+                </a>
+            </ul>
+
+            <button 
+            *ngIf="hasButtonScroll"
+            id="scroll-rigth"
+            class="scroll-button"
+            (click)="scrollButton(2)"> > </button>
+        </nav>
+
+        <p>{{creatorDescription}}</p>
+    </div>
+</article>

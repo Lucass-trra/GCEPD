@@ -1,0 +1,25 @@
+a#arrow-anchor {
+    width: 50px;
+    height:50px;
+    border-radius: 50%;
+    border: transparent;
+    
+    align-self: center;
+    display: flex;
+    padding: .3rem;
+    padding-top: .6rem;
+
+
+    cursor: pointer;
+    background-color: transparent;
+    transition: .3s ease-in-out;
+    animation: topDownAnimation 1s ease-in-out infinite alternate;
+
+    img {
+        width: 100%;
+    }
+}
+
+a#arrow-anchor:hover {
+    background-color: var(--color_default_mediumBlue);
+}

@@ -1,0 +1,53 @@
+div.resourcesGroup {
+    gap: 5%;
+    display: flex;
+    justify-content:center;
+    background-color: var(--color_default_darkBlue);
+    padding-top: 2rem;
+    padding-bottom: 2rem;   
+    border-radius: .5rem;
+
+    div.feature-content{
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+
+        div#stock-presentation {
+            display: flex;
+            align-items: center;
+            margin-bottom: .6rem;
+            gap: 1rem;
+
+            h3 {
+                color: var(--color_default_white);
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                letter-spacing: 1px;
+                text-transform: capitalize;
+                font-size: 1.3rem;
+            }
+            img {
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+            }
+        }
+
+        p {
+            color: rgb(149, 147, 147);
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+    }
+
+    figure {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        width: 40%;
+        
+        img {
+            border-radius: .4rem;
+            width: 80%;
+        }
+    }
+}

@@ -70,7 +70,7 @@
     </form>
 
      
-    <div class="user-welcome" *ngIf="signUpForm.get('name')">
-      welcome {{signUpForm.get('name')?.value}}
-   </div>
+      <div class="user-welcome" *ngIf="signUpForm.get('name')">
+        welcome <span>{{signUpForm.get('name')?.value}}</span>
+      </div>
 </section>
