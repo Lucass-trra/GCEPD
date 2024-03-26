@@ -1,9 +1,9 @@
 
-# GCEPD
+# StockPlus
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.1.2.
 
 ## Resumo
-GCEPD é um sistema de gerenciamento e consulta para produtos domésticos. A ideia é permitir ao usuário cadastrar seus produtos domésticos recém comprados ou até mesmo usados com todas as informações relevantes sobre esse produto, para que futuramente o mesmo seja consultado, deletado ou editado.
+StockPlus é um sistema de gerenciamento e consulta para produtos domésticos. A ideia é permitir ao usuário cadastrar seus produtos domésticos recém comprados ou até mesmo usados com todas as informações relevantes sobre esse produto, para que futuramente o mesmo seja consultado, deletado ou editado.
 
 ## Tecnologias
 - Angular
@@ -21,9 +21,9 @@ As principais estruturas que compõem o visual do projeto são os `components`, 
 
 `Components` se referem as menores estruturas do projeto, que normalmente são reutilizadas em várias partes, porém, com algumas modificações no conteúdo.
 
-`Pages` se refere a pasta que contém todas as páginas importantes do GCEPD, essas pages são compostas de components diferentes, e esses mesmos components são organizados de formas diferentes para cada página
+`Pages` se refere a pasta que contém todas as páginas importantes do StockPlus, essas pages são compostas de components diferentes, e esses mesmos components são organizados de formas diferentes para cada página
 
-shared são como as pages, porém, são pages globais, e isso significa que eles estão presentes em qualquer contexto e são fixos, os exemplos são: header, footer, aside
+`shared` são como as pages, porém, são pages globais, e isso significa que eles estão presentes em qualquer contexto e são fixos, os exemplos são: header, footer, aside
 
 
 <!-- ### Backend -->

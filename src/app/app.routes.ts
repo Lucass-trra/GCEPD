@@ -1,7 +1,7 @@
 import { Routes } from '@angular/router';
 
 //pages
-import { GCEPD_PageComponent } from "./pages/GCEPD_page/GCEPD-page.component";
+import { StockPlus_PageComponent } from "./pages/stockPlus_page/stockPlus-page.component";
 import { ProductDetailsPageComponent } from "./pages/product-details-page/product-details-page.component";
 import { ProductSignUpPageComponent } from "./pages/product_signUp-page/product_signUp-page.component";
 import { ReportPageComponent } from "./pages/report-page/report-page.component";
@@ -15,7 +15,7 @@ export const routes: Routes = [
 
     {
         path: "GCEPD",
-        component: GCEPD_PageComponent
+        component: StockPlus_PageComponent
     },
 
     {

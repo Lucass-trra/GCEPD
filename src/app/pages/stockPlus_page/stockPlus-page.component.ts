@@ -11,10 +11,10 @@ import { category } from '../../../types';
   selector: 'app-category-page',
   standalone: true,
   imports: [ComponentsModule,CommonModule, SharedModule],
-  templateUrl: './GCEPD-page.component.html',
-  styleUrl: './GCEPD-page.component.css'
+  templateUrl: './stockPlus-page.component.html',
+  styleUrl: './stockPlus-page.component.css'
 })
-export class GCEPD_PageComponent {
+export class StockPlus_PageComponent {
   totalStock: number = 2000;
   totalcosts: number = 1000
   totalProducts: number = 90;
