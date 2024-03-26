@@ -8,17 +8,42 @@
     
 <main>
     <section id="aside-category-container">
-        <app-aside-category></app-aside-category>
+        <app-aside-category
+        (emitCategory)="catchCategory($event)"
+        ></app-aside-category>
     </section>
 
 
-    <section id="product-cards-container">
-        <app-product-card></app-product-card>
-        <app-product-card></app-product-card>
-        <app-product-card></app-product-card>
-        <app-product-card></app-product-card>
-        <app-product-card></app-product-card>
-        <app-product-card></app-product-card>
+    <section id="stockPlus-container">
+        <span class="category-name">{{category.name}}</span>
+
+        <fieldset id="header-stockPlus">
+            <legend>total data</legend>
+
+            <div class="metric-container">
+                <span class="numeric-span">{{totalProducts}}</span>
+                <span>produtos</span>
+            </div>
+        
+            <div class="metric-container">
+                <span class="numeric-span">{{totalcosts}}$</span>
+                <span>gastos totais</span>
+            </div>
+        
+            <div class="metric-container">
+                <span class="numeric-span">{{totalStock}}</span>
+                <span>estoque total</span>
+            </div>
+        </fieldset>
+
+        <div id="product-cards-container">
+            <app-product-card></app-product-card>
+            <app-product-card></app-product-card>
+            <app-product-card></app-product-card>
+            <app-product-card></app-product-card>
+            <app-product-card></app-product-card>
+            <app-product-card></app-product-card>
+        </div>
     </section>
 </main>
 

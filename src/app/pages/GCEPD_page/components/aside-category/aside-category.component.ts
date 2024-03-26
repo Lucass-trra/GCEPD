@@ -1,4 +1,4 @@
-import { Component, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
+import { Component, ViewChild, ElementRef, AfterViewInit, EventEmitter, Output } from '@angular/core';
 import { CommonModule } from "@angular/common";
 import { FormsModule } from "@angular/forms";
 import { RouterLink } from '@angular/router';
@@ -16,6 +16,8 @@ import { category } from '../../../../../types';
 })
 
 export class AsideCategoryComponent implements AfterViewInit {
+  @Output() emitCategory: EventEmitter<category> = new EventEmitter();
+
   btnAddCategoryHTML?: HTMLButtonElement;
   @ViewChild('btnAddCategory', {static: false}) btnAddCategory?: ElementRef<HTMLButtonElement>;
 
@@ -39,14 +41,18 @@ export class AsideCategoryComponent implements AfterViewInit {
 
       this.categoriesList.push({
         name: this.inputValue.trim(),
-        link: "asasasasa",
-        id: idCategory
+        category_id: idCategory,
+        user_id:2
       })
     
       this.isInputVisible = false
       this.inputValue = ''
     }
   };
+
+  sendCategoryToStockPlusPage(category:category) {
+    this.emitCategory.emit(category)
+  }
 
   scrollLeft() {
     if (this.userCategoriesHTML) {

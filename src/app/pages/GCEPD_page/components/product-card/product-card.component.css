@@ -2,12 +2,15 @@ section.card-container {
     display: flex;
     flex-direction: column;
     border: 2px solid var(--color_default_black);
+   
     padding-top: 1rem;
     padding-bottom: 0px;
     border-radius: .5rem;
     gap: 1rem;
 
     a {
+        display: flex;
+        flex-direction: column;
         text-decoration: none;
         color: var(--color_default_black);
         transition: .4s ease-in-out;
@@ -17,17 +20,27 @@ section.card-container {
         box-shadow: 10px 10px 10px 0px var(--color_default_black);
     }
 
+    h4, span.stock-quantity {
+        background-color: var(--color_default_ligthBlue);
+        border-radius: .4rem;
+        padding: .5rem;
+        font-family: "Roboto", sans-serif;
+        font-weight: 500;
+        letter-spacing: 1px;
+    }
+
+    span.stock-quantity {
+        text-align: center;
+        align-self: flex-end;
+        width: 20%;
+    }
+
     header {
         display: flex;
         padding-left: 1rem;
         padding-right: 1rem;
         justify-content: space-between;
         margin-bottom: .5rem;
-
-        h4 {
-            font-size: 1.2rem;
-            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-        }
     }
 
     figure {
@@ -41,25 +54,4 @@ section.card-container {
             border-radius: 1rem;
         }
     }
-
-    div.main-informations {
-        display: flex;
-        justify-content: flex-end;
-        padding: 1rem;
-        background-color: var(--color_default_darkBlue);
-        color: var(--color_default_white);
-        gap: 1rem;
-
-        span.quantity-name, p {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            width: 50%;
-            letter-spacing: 1px;
-            text-align: end;
-        }
-
-        span.quantity-name{
-            font-weight: bolder;
-        }
-    }
-
 }

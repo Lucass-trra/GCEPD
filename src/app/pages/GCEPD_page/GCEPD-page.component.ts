@@ -5,6 +5,7 @@ import { CommonModule } from '@angular/common';
 import { ComponentsModule } from "./components/components.module";
 //shared components
 import { SharedModule } from "../../shared/shared.module";
+import { category } from '../../../types';
 
 @Component({
   selector: 'app-category-page',
@@ -14,5 +15,17 @@ import { SharedModule } from "../../shared/shared.module";
   styleUrl: './GCEPD-page.component.css'
 })
 export class GCEPD_PageComponent {
+  totalStock: number = 2000;
+  totalcosts: number = 1000
+  totalProducts: number = 90;
 
+  category: category = {
+    name: 'General',
+    category_id: 0,
+    user_id: 0
+  }
+
+  catchCategory(event: category) {
+    if(event) this.category = event
+  }
 }

@@ -5,8 +5,6 @@
     (click)="showInputToAddCategory(true)"
     >
     <img *ngIf="buttonContent" src="../../../../../assets/plus.png" alt="plus icon">
-
-    <span *ngIf="!buttonContent"> new category</span>
     </button>
     
     <div class="inputToAddCategory">
@@ -27,7 +25,7 @@
     <section class="user-categories" #userCategories>
         <a 
         *ngFor="let c of categoriesList"
-        [routerLink]="['category', c.id ]"
+        (click)="sendCategoryToStockPlusPage(c)"
         >
         {{c.name}}
         </a>

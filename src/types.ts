@@ -1,7 +1,7 @@
 export type category = {
     name:string
-    link: string
-    id: number 
+    user_id:number 
+    category_id: number 
 }
 
 export type TutorialLinks = {
