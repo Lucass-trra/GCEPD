@@ -1,0 +1,89 @@
+section.by-category {
+    display: flex;
+    flex-direction: column;
+
+    div.category-list {
+        display: flex;
+        align-items: center;
+        align-self: center;
+        margin-bottom: 1rem;
+        gap: .5rem;
+
+        button.scroll-button {
+            width: 35px;
+            height: 35px;
+
+            border-radius: 50%;
+            border: transparent;
+
+            cursor: pointer;
+            transition: .3s ease-in-out;
+            background-color: transparent;
+        }
+
+        button.scroll-button:hover {
+            background-color: var(--color_default_ligthBlue);
+        }
+
+        ul {
+            overflow-x: hidden;
+            white-space: wrap;
+            width: 600px;
+            height: 60px;
+            background-color: var(--color_default_darkBlue);
+            border-radius: 0.5rem;
+            padding-left: 1rem;
+            
+            
+            a {
+                text-decoration: none;
+                font-size: 1.3rem;
+                color: var(--color_default_ligthBlue);
+                position: relative;
+                top: 16px;
+                margin-right: 1rem;
+                padding: .5rem;
+                border-radius: 0.5rem;
+                transition: .3s ease-in-out;
+            }
+
+            a:hover {
+                background-color: var(--color_default_white);
+                color: var(--color_default_darkBlue);
+            }
+        }
+
+    }
+
+    div.reportPage-by-category {
+        display: flex;
+        flex-direction: column;
+
+        h2 {
+            font-size: 2rem;
+            align-self: center;
+            color: var(--color_default_black);
+            border-bottom: 2px solid var(--color_default_black);
+            text-transform: capitalize;
+        }
+    }
+
+    figure.figure-container {
+        gap: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        justify-content: center;
+        margin-top: 3rem;
+
+        letter-spacing: 1px;
+        color: var(--color_default_black);
+        font-family: Arial, Helvetica, sans-serif;
+
+        img {
+            width: 20%;
+        }
+        
+    }
+}

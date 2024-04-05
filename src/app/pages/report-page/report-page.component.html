@@ -1,0 +1,46 @@
+<header>
+    <app-header
+    ></app-header>
+</header>
+
+
+<main>
+    <nav>
+        <ul>
+            <li>
+                <button class="general" type="button" (click)="showGeneralInfo()">General</button>
+            </li>
+
+            <li>
+                <button type="button" (click)="showByCategoryInfo()">By category</button>
+            </li>
+        </ul>
+    </nav>
+
+    <section class="general" *ngIf="isContainerActive">
+        <app-primary-info-general></app-primary-info-general>
+
+        <app-secundary-info
+        [isAlternativeStyle]="true"
+        ></app-secundary-info>
+
+        <app-secundary-info
+        [isAlternativeStyle]="false"
+        ></app-secundary-info>
+
+        <app-secundary-info
+        [isAlternativeStyle]="true"
+        ></app-secundary-info>
+
+        <app-tertiary-info
+        [isalternativeStyle]="false"
+        [title]="'cor que mais aparece'"
+        [listOfStrings]="['red','red','red','yellow','yellow','blue','pink','PINK','PINK']">
+        </app-tertiary-info> 
+    </section>
+
+    <section class="by-category" *ngIf="!isContainerActive">
+        <app-report-page-by-category *ngIf="true"></app-report-page-by-category>
+    </section>
+
+</main>

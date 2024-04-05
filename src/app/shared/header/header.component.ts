@@ -11,22 +11,6 @@ import { CommonModule } from "@angular/common";
   templateUrl: './header.component.html',
   styleUrl: './header.component.css'
 })
-export class HeaderComponent implements OnChanges {
-  @Input() signUpButton: boolean = true;
-  @Input() newProduct: boolean = true;
+export class HeaderComponent{
   
-  hasSignUpButton:boolean = true;
-  hasNewProductButton:boolean = true
-
-  constructor() {
-
-  }
-
-  ngOnChanges(): void {
-    this.hasNewProductButton = this.newProduct;
-    this.hasSignUpButton = this.signUpButton
-  }
-
-
-
 }

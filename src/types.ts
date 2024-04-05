@@ -53,3 +53,10 @@ export type CreatorSocialLinks = {
     img:string
     alt:string
 }[];
+
+
+export type productInfoReportPage = {
+    product: string
+    numeric: string | number
+  }
+  

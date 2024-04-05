@@ -1,10 +1,17 @@
-<header>
-    <app-header
-    [signUpButton]="false"
-    ></app-header>
+<header [ngClass]="headerSytle">
+    <nav>
+        <ul>
+            <li><a href="#aboutAnchor">about</a></li>
+            <li><a href="#resourceAnchor">resources</a></li>
+            <li><a href="#creatorAnchor">creators</a></li>
+            <li><a href="#loginAnchor">login</a></li>
+        </ul>
+    </nav>
 </header>
 
 <main>
+    
+    <hr id="aboutAnchor">
     <section id="about"> 
         <div id="about-text">
             <h1> welcome to GCEPD</h1>
@@ -34,6 +41,7 @@
         </div>
     </section>
 
+    <hr id="resourceAnchor">
     <section id="resources">
         <app-section-title
         [href]="'#creators'"
@@ -80,6 +88,7 @@
         ></app-card-feature>
     </section>
 
+    <hr id="creatorAnchor">
     <section id="creators">
         <app-section-title
         [title]="'creators'"
@@ -102,6 +111,7 @@
         ></app-creator-card>
     </section>
 
+    <hr id="loginAnchor">
     <section id="userRegister-from-container">
         <div id="userRegister-figure">
             <figure>

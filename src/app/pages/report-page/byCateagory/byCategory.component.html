@@ -1,0 +1,71 @@
+<section class="by-category">
+    <div class="category-list">
+        <button 
+        id="scroll-left" 
+        class="scroll-button" 
+        (click)="scrollList(1)"> < </button>
+
+        <ul #unOrderList>
+            <a 
+            *ngFor="let c of categoriesList"
+            (click)="showProductsByCategory(c)"
+            
+            >{{c.name}}</a>
+        </ul>
+
+        <button 
+        id="scroll-rigth" 
+        class="scroll-button" 
+        (click)="scrollList(2)"> > </button>
+    </div>
+
+
+    <div 
+    class="reportPage-by-category" 
+    *ngIf="isContainerShow else NoProductsToShowContainer">
+
+        <h2>{{categoryName}}</h2>
+
+        <app-primary-info
+        [budget]="4000"
+        [totalExpense]="8000"
+        ></app-primary-info>
+
+        <app-secundary-info
+        [isAlternativeStyle]="true">
+        </app-secundary-info>
+
+        <app-secundary-info
+        [isAlternativeStyle]="false">
+        </app-secundary-info>
+
+        <app-secundary-info
+        [isAlternativeStyle]="true">
+        </app-secundary-info>
+
+        <app-tertiary-info
+        [isalternativeStyle]="false"
+        [title]="'cor que mais aparece'"
+        [listOfStrings]="listOfColor" 
+        >
+        </app-tertiary-info>
+    </div>
+   
+    <ng-template #NoProductsToShowContainer>
+        <figure *ngIf="isFigureShow" class="figure-container">
+            <img src="../../../../assets/cursor.png" alt="cursor icon">
+
+            <figcaption>select a category to see your statistics</figcaption>
+        </figure>
+
+        <figure *ngIf="!isFigureShow" class="figure-container">
+            <img src="../../../../assets/404.png" alt="404 error not found">
+
+            <figcaption>sorry, does not have any products for this category or it happened an internal error in server</figcaption>
+        </figure>
+    </ng-template>
+
+</section>
+
+
+

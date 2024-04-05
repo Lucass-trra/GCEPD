@@ -1,0 +1,47 @@
+<section id="primaryInfo-container">
+    <div class="principal-card">
+        <p>total de produtos</p>
+        <span>{{totalProducts}}</span>
+    </div>
+
+    <div class="budgetAndValidity-container">
+        <div id="budget-container">
+            <div id="budget" class="budget-cards">
+                <h3>Orçamento estipulado</h3>
+                <span>{{budget}}</span>
+            </div>
+
+            <div id="okBudget" class="budget-cards" *ngIf="isDivActive else outOfBudget">
+                <h3>Dentro do orçamento</h3> 
+                
+                <h4 *ngIf="isTextActive"><span>{{finalResult}}</span> a menos do orçamento estipulado</h4>
+
+                <h4 *ngIf="!isTextActive">gastou exatamente o que estava previsto no orçamento</h4>
+            </div>
+            
+            <ng-template #outOfBudget>
+                <div class="budget-cards" id="outBudget">
+                    <h3>Fora do orçamento</h3> 
+                    <h4><span>{{finalResult}}</span> a mais do orçamento estipulado</h4>
+                </div>
+            </ng-template>
+        </div>
+
+        <div id="validity-container">
+            <div class="validity-card">
+                <p class="title">validade mais perto de expirar</p>
+                <p class="product-name">product name</p>
+                <span class="date-info">01/01/2024</span>
+            </div>
+
+            <div class="validity-card">
+                <p class="title">validade mais longe de expirar</p>
+                <p class="product-name">product name</p>
+                <span class="date-info">01/01/2024</span>
+            </div>
+        </div>
+    </div>
+
+    
+  
+</section>

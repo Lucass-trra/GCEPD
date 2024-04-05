@@ -1,0 +1,92 @@
+section#tertiaryInfo-container {
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+   
+    div#principal-info,div#list-container {
+        width: 50%;
+        display: flex; 
+        gap: .5rem;
+        font-family: "roboto",Arial, Helvetica, sans-serif;
+    }
+
+    div#principal-info {
+        padding: 2rem;
+        border-radius: .5rem;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        box-shadow: .4rem .4rem .4rem 0rem rgba(0, 0, 0, .5);
+        background-color: var(--color_default_white);
+
+        h3 {
+            font-size: 1.2rem; 
+            font-weight: 400;
+        }
+
+        span {
+            color: lightcoral;
+            font-size: 2rem;
+            font-weight: 600;
+            font-style: italic;
+            letter-spacing: 1px;
+        }
+    
+
+    }
+
+    div#list-container {
+        button.scroll-button {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: transparent;
+            background-color: transparent;
+
+            transition: .3s ease-in-out;
+            cursor: pointer;
+        }
+
+        button.scroll-button:hover {
+            background-color: var(--color_default_mediumBlue);
+        }
+
+        ul {
+            overflow-x: hidden;
+            white-space: nowrap;
+            width: 500px;
+            height: 50px;
+
+            li {
+                display: inline;
+                border-radius: 1rem;
+                padding: .4rem;
+                position: relative;
+                margin-right: .5rem;
+                top: 10px;
+
+                background-color: var(--color_default_white);
+                box-shadow: .2rem .2rem .2rem 0rem rgba(0, 0, 0, 0.5);
+                
+                p {
+                    display: inline;
+                    width: 100%;
+                    margin-right: 0.5rem;
+                    text-align: center;
+                }
+
+                span.span-number {
+                    color: lightcoral;
+                    font-weight: bolder;
+                    font-style: italic;
+                    margin-left: .5rem;
+                }
+              
+            }
+        }
+    }
+}

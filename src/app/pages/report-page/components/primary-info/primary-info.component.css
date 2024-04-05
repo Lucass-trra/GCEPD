@@ -1,0 +1,133 @@
+section#primaryInfo-container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+    
+    div.principal-card ,div.validity-card, div.budget-cards {
+        box-shadow: .2rem .2rem .2rem 0rem rgba(0, 0, 0, 0.4);
+        border-radius: 0.5rem;
+    }
+
+    div.principal-card {
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 1rem;
+        align-items: center;
+
+        background-color: var(--color_default_mediumBlue);
+
+        p,span {
+            font-family: "roboto",Arial, Helvetica, sans-serif;
+            font-weight: bolder;
+        }
+
+        p {
+            color: var(--color_default_black);
+            font-size: 2rem;
+        }
+        
+        span {
+            color: var(--color_default_white);
+            font-size: 3.4rem;
+        }
+
+    }
+    
+    div.budgetAndValidity-container {
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        
+        div#budget-container {
+            display: flex;
+            gap: 1rem;
+            
+            div.budget-cards {
+                width: 50%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding: 1rem;
+                gap: 1rem;
+                
+                border-radius: 0.5rem;
+                background-color: var(--color_default_mediumBlue);
+                
+                color: var(--color_default_black);
+                font-family: "roboto",Arial, Helvetica, sans-serif;
+                text-align: center;
+                
+                h3 {
+                    font-size: 1.4rem;
+                    letter-spacing: 1px;
+                }
+                
+                span {
+                    font-size: 1.6rem;
+                    color: var(--color_default_white);
+                    font-weight: bolder;
+                }
+            }
+
+            div#okBudget {
+                background-color: lightgreen;
+                color: black;
+                
+                span {
+                    color: var(--color_default_mediumBlue);
+                }
+            }
+            
+            div#outBudget {
+                background-color: lightcoral;
+                color: var(--color_default_white);
+
+                span {
+                    color: lightgreen;
+                }
+            }
+        }
+
+        div#validity-container {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+
+
+            div.validity-card {
+                display: flex;
+                flex-direction: column;
+                
+                padding: .5rem;
+                padding-left: 1rem;
+                padding-right: 1rem;
+                
+                color: var(--color_default_black);
+                font-size: 1.2rem;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                
+                background-color: var(--color_default_white);
+                box-shadow: .2rem .2rem .2rem 0rem rgba(0, 0, 0, 0.4);
+
+                p.product-name, span.date-info {
+                    align-self: self-end;
+                }
+
+                span.date-info {
+                    color: var(--color_default_mediumBlue);
+                    font-weight: bolder;
+                    font-style: italic;
+                }
+
+            }
+        }
+    }
+
+
+
+}

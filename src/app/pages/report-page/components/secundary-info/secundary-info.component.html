@@ -1,0 +1,62 @@
+<section id="secundaryInfo-container"
+[ngStyle]="{
+    'flex-direction': isAlternativeStyle 
+    ? alignSectionAlternativeStyle
+    : alignSectionDefaultStyle 
+    }"
+>
+    <div 
+    id="big-card" 
+    [ngStyle]="{
+        'background-color': isAlternativeStyle 
+        ? colorContainerAlternativeStyle
+        : colorContainerDefaultStyle 
+        }"
+        >
+        <h3 
+        [ngStyle]="{
+            'color': isAlternativeStyle 
+            ? colorH3AlternativeStyle
+            : colorH3DefaultStyle 
+            }"
+        
+        >{{bigCardContent.h3}}</h3>
+        <span
+        [ngStyle]="{
+            'color': isAlternativeStyle 
+            ? colorSpanAlternativeStyle
+            : colorSpanDefaultStyle 
+            }"
+        >{{bigCardContent.span}}</span>
+    </div>
+
+    <div id="mediumCard-container">
+        <div 
+        class="medium-card"
+        *ngFor="let m of mediumCardContent"
+        [ngStyle]="{
+            'background-color': isAlternativeStyle 
+            ? colorContainerAlternativeStyle
+            : colorContainerDefaultStyle 
+            }"
+        >
+            <h3 
+            [ngStyle]="{
+                'color': isAlternativeStyle 
+                ? colorH3AlternativeStyle
+                : colorH3DefaultStyle 
+                }"
+                >
+                {{m.h3}}:
+            </h3>
+            
+            <span
+            [ngStyle]="{
+                'color': isAlternativeStyle 
+                ? colorSpanAlternativeStyle
+                : colorSpanDefaultStyle 
+                }"
+            >{{m.span}}</span>
+        </div>
+    </div>
+</section>
